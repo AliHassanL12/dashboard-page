@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    line-height: 1.5;
 }
 
 :root {
@@ -101,18 +102,12 @@ img {
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-left: 25px;
 }
 
 .search-bar, 
 .notification {
     padding-top: 20px;
     padding-left: 20px;
-}
-
-.upper-header {
-    display: flex;
-    justify-content: space-between;
 }
 
 .header > .upper-header > .search-bar > label > img {
@@ -137,5 +132,56 @@ img {
 .notification > img + span {
     font-size: 1.3rem;
     font-weight: bold;
-    margin-right: 80px;
+}
+
+.lower-header,
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px; 
+}
+
+.lower-header {
+    padding: 20px 60px;
+}
+
+.lower-header > .greet-container > img {
+    height: 70px;
+}
+
+.lower-header > .greet-container{ 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lower-header > .greet-container > p {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.lower-header > .greet-container > p > span {
+    font-size: 1.5rem;
+}
+
+.lower-header > .buttons > button {
+    font-size: 1.1rem;
+    border: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0898ed;
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border-radius: 25px;
+}
+
+.lower-header > .buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.header {
+    box-shadow: 1px 1px 5px gray;
 }
