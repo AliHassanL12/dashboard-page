@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --white-clr: white;
+    --icon-height: 30px;
+    --sidebar-gap: 20px 50px;
+}
+
+img {
+    display: block;
+}
+
 .container {
+    font-family: "Roboto", sans-serif;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 3fr;
@@ -12,7 +25,7 @@
 }
 
 .sidebar {
-    border: 1px solid blue;
+    background-color: #0898ed;
     grid-row: 1 / 3;
 }
 
@@ -25,3 +38,48 @@
     border: 1px solid green;
     grid-column: 2 / 3;
 }
+
+.sidebar > .sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px 50px 20px;
+    color: var(--white-clr);
+}
+
+.sidebar > .sidebar-header > img {
+    fill: var(--white-clr);
+    width: auto;
+    height: 50px;
+    padding-right: 10px;
+}
+
+.sidebar > .sidebar-header > h1 {
+    font-size: 1.8rem;
+}
+
+.sidebar > .sidebar-navigation,
+.sidebar > .support-navigation { 
+    display: grid;
+    grid-template-columns: 40px 100px;
+    gap: var(--sidebar-gap);
+    align-items: center;
+}
+
+.sidebar > .sidebar-navigation > img,
+.sidebar > .support-navigation > img {
+    height: var(--icon-height);
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.sidebar-navigation > img + a,
+.support-navigation > img + a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar > .support-navigation {
+    margin-top: 60px;
+} 
