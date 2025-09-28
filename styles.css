@@ -30,12 +30,10 @@ img {
 }
 
 .header {
-    border: 1px solid red;
     grid-column: 2 / 3;
 }
 
 .main-content {
-    border: 1px solid green;
     grid-column: 2 / 3;
 }
 
@@ -72,6 +70,9 @@ img {
     cursor: pointer;
 }
 
+.header > .upper-header img {
+    cursor: pointer;
+}
 .sidebar-navigation > img + a,
 .support-navigation > img + a {
     font-size: 1.3rem;
@@ -83,3 +84,58 @@ img {
 .sidebar > .support-navigation {
     margin-top: 60px;
 } 
+
+/* HEADER SECTION */
+
+.search-bar > label + input {
+    outline: none;
+    border: none;
+    background-color: #80808026;
+    border-radius: 15px;
+    height: 32px;
+    width: 760px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: 25px;
+}
+
+.search-bar, 
+.notification {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.upper-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header > .upper-header > .search-bar > label > img {
+    height: 27px;
+}
+
+.notification {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification img:first-child {
+    height: 30px;
+}
+
+.notification img {
+    height: 50px;
+}
+
+.notification > img + span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-right: 80px;
+}
