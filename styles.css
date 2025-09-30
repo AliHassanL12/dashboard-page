@@ -189,55 +189,22 @@ img {
 /* MAIN CONTENT */
 
 .main-content {
+    padding: 20px;
     display: grid;
-    padding: 25px;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1.25fr 1fr;
-    background-color: #e1e1e1ad;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 50px 1.5fr 50px 1.5fr;
+    border: 1px solid red;
+}
+
+.main-content > h3 {
+    align-self: center;
 }
 
 .main-content > .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 30px;
-    grid-auto-rows: 175px;
-    gap: 20px 50px;
-    grid-row: 1 / 3;
-    padding: 10px;
+    grid-row: 2 / 5;
 }
 
-.main-content > .cards > .project-card {
-    border-radius: 20px;
-    padding: 20px 30px;
-    background-color: white;
-    border-left: 8px solid #ffcc6e;
-    display: grid;
-    grid-template-rows: 80% 20%;
-}
-
-.main-content > .cards > h3 {
-    grid-column: 1 / 3;
-}
-.main-content > .announcements {
+.main-content > .trending-header {
+    grid-row: 3;
     grid-column: 2/3;
-    background-color: lightcoral;
-}
-
-.main-content > .trending {
-    grid-column: 2/3;
-    background-color: lightcyan;
-}
-
-.main-content .project-card > .icon-container {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-}
-
-.main-content .project-card > .icon-container > img {
-    height: 25px;
-}
-
-.main-content .project-card div:first-child > p {
-    color: rgba(0, 0, 0, 0.555);
 }
