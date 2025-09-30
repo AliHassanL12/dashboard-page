@@ -193,7 +193,7 @@ img {
     display: grid;
     grid-template-columns: 4fr 1fr;
     grid-template-rows: 50px 1.5fr 50px 1.5fr;
-    border: 1px solid red;
+    background-color: #8080801a;
 }
 
 .main-content > h3 {
@@ -201,10 +201,90 @@ img {
 }
 
 .main-content > .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding-right: 25px;
     grid-row: 2 / 5;
 }
 
 .main-content > .trending-header {
     grid-row: 3;
     grid-column: 2/3;
+}
+
+.main-content > .cards > .item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px;
+    border-left: 7px solid #ffa500bf;
+}
+
+.main-content > .cards > .item > p {
+    font-size: 0.9rem;
+    color: #00000085;
+    flex-grow: 1;
+}
+
+.main-content .item-interact-icons > img {
+    height: 27px;
+}
+
+.main-content .item-interact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.main-content > .announcement-container {
+    display: grid;
+    row-gap: 10px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 25px;
+}
+
+.main-content > .announcement-container div:not(:last-child) {
+    border-bottom: 1px solid #80808052;
+    padding-bottom: 12px;
+}
+
+.main-content > .announcement-container p {
+    color: #00000085;
+    font-size: 0.8rem;
+}
+
+.main-content > .trending-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: white;
+    border-radius: 20px;
+    align-items: center;
+    padding: 20px 20px;
+    column-gap: 5px;
+}
+
+.main-content > .trending-container > img {
+    height: 80px;
+}
+
+.main-content > .trending-container > div > p {
+    font-size: 0.9rem;
+}
+
+.main-content > .trending-container > div > p > span {
+    color: #00000085;
+}
+
+.main-content > .trending-container > .profile-img {
+    height: 55px;
+    align-self: center;
+    justify-self: center;
 }
